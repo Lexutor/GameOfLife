@@ -42,7 +42,7 @@ while True:
         if sum(mouseClick) > 0:
             posX, posY = pygame.mouse.get_pos()
             celX, celY = int(np.floor(posX / dimCellWidth)), int(np.floor(posY / dimCellHeight))
-            newGameState[celX, celY] = 1
+            newGameState[celX, celY] = not mouseClick[2]
 
     for y in range(0, nxC):
         for x in range(0, nyC):
