@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((height, width)) # Creación de la pantalla
 gameBackground = 25, 25, 25 # Color de fondo
 screen.fill(gameBackground) # Aplicación del color de fondo
 
-nxC, nyC = 25, 25 # Cantidad de celdas en los dos ejes (X, Y)
+nxC, nyC = 50, 50 # Cantidad de celdas en los dos ejes (X, Y)
 
 # Dimensiones de las celdas
 dimCellWidth = width / nxC
@@ -66,7 +66,7 @@ while True:
                 elif gameState[x, y] == 1 and (n_neigh < 2 or n_neigh > 3):
                     newGameState[x, y] = 0
                 
-            # Creación de cada que se va a dibujar
+            # Creación de cada celda que se va a dibujar
             poly = [((x) * dimCellWidth, y * dimCellHeight),
                     ((x + 1) * dimCellWidth, y * dimCellHeight),
                     ((x + 1) * dimCellWidth, (y + 1) * dimCellHeight),
